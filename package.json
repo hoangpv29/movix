@@ -1,7 +1,7 @@
 {
   "homepage": "https://hoangpv29.github.io/movix",
   "name": "movix",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

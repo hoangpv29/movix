@@ -18,7 +18,9 @@ function App() {
   const navigate = useNavigate();
   useEffect(() => {
     fetchApiConfig();
-    navigate("/")
+    () => {
+      navigate("/");
+    };
     genresCall();
   }, []);
   const fetchApiConfig = () => {
