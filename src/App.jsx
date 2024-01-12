@@ -15,12 +15,8 @@ function App() {
   // const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch();
   const { url } = useSelector((state) => state.home);
-  const navigate = useNavigate();
   useEffect(() => {
     fetchApiConfig();
-    () => {
-      navigate("/");
-    };
     genresCall();
   }, []);
   const fetchApiConfig = () => {
