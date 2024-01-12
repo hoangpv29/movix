@@ -18,7 +18,14 @@ function App() {
   useEffect(() => {
     fetchApiConfig();
     genresCall();
+    
   }, []);
+
+  
+  
+  // Gọi hàm khi trang web được tải lần đầu tiên
+
+
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
       const url = {
@@ -47,7 +54,7 @@ function App() {
     dispatch(getGenres(allGenres));
   };
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/" >
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
