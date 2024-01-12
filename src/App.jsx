@@ -47,7 +47,7 @@ function App() {
     dispatch(getGenres(allGenres));
   };
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Header />
       <Routes >
         <Route path="/" element={<Home />} />
