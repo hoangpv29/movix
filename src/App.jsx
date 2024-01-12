@@ -18,6 +18,7 @@ function App() {
   useEffect(() => {
     fetchApiConfig();
     genresCall();
+    window.location.reload();
   }, []);
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
@@ -49,7 +50,7 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <Header />
-      <Routes >
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
