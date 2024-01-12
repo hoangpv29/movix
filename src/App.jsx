@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
+import { useNavigate } from "react-router-dom";
 import { getApiConfiguration, getGenres } from "./utils/homeSlice";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -14,11 +15,11 @@ function App() {
   // const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch();
   const { url } = useSelector((state) => state.home);
-
+  const navigate = useNavigate();
   useEffect(() => {
     fetchApiConfig();
+    console.log(123);
     genresCall();
-    window.location.reload();
   }, []);
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
