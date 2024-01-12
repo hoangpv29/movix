@@ -49,7 +49,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
+      <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/search/:query" element={<SearchResult />} />
